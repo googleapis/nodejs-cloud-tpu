@@ -28,10 +28,9 @@ import {PassThrough} from 'stream';
 import {protobuf, LROperation, operationsProtos} from 'google-gax';
 
 function generateSampleMessage<T extends object>(instance: T) {
-  const filledObject = (instance.constructor as typeof protobuf.Message).toObject(
-    instance as protobuf.Message<T>,
-    {defaults: true}
-  );
+  const filledObject = (
+    instance.constructor as typeof protobuf.Message
+  ).toObject(instance as protobuf.Message<T>, {defaults: true});
   return (instance.constructor as typeof protobuf.Message).fromObject(
     filledObject
   ) as T;
@@ -279,9 +278,8 @@ describe('v1.TpuClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.cloud.tpu.v1.Node()
       );
-      client.innerApiCalls.getNode = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.getNode =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.getNode(
           request,
@@ -357,9 +355,8 @@ describe('v1.TpuClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.cloud.tpu.v1.TensorFlowVersion()
       );
-      client.innerApiCalls.getTensorFlowVersion = stubSimpleCall(
-        expectedResponse
-      );
+      client.innerApiCalls.getTensorFlowVersion =
+        stubSimpleCall(expectedResponse);
       const [response] = await client.getTensorFlowVersion(request);
       assert.deepStrictEqual(response, expectedResponse);
       assert(
@@ -390,9 +387,8 @@ describe('v1.TpuClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.cloud.tpu.v1.TensorFlowVersion()
       );
-      client.innerApiCalls.getTensorFlowVersion = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.getTensorFlowVersion =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.getTensorFlowVersion(
           request,
@@ -471,9 +467,8 @@ describe('v1.TpuClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.cloud.tpu.v1.AcceleratorType()
       );
-      client.innerApiCalls.getAcceleratorType = stubSimpleCall(
-        expectedResponse
-      );
+      client.innerApiCalls.getAcceleratorType =
+        stubSimpleCall(expectedResponse);
       const [response] = await client.getAcceleratorType(request);
       assert.deepStrictEqual(response, expectedResponse);
       assert(
@@ -504,9 +499,8 @@ describe('v1.TpuClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.cloud.tpu.v1.AcceleratorType()
       );
-      client.innerApiCalls.getAcceleratorType = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.getAcceleratorType =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.getAcceleratorType(
           request,
@@ -617,9 +611,8 @@ describe('v1.TpuClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.createNode = stubLongRunningCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.createNode =
+        stubLongRunningCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.createNode(
           request,
@@ -808,9 +801,8 @@ describe('v1.TpuClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.deleteNode = stubLongRunningCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.deleteNode =
+        stubLongRunningCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.deleteNode(
           request,
@@ -999,9 +991,8 @@ describe('v1.TpuClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.reimageNode = stubLongRunningCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.reimageNode =
+        stubLongRunningCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.reimageNode(
           request,
@@ -1190,9 +1181,8 @@ describe('v1.TpuClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.stopNode = stubLongRunningCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.stopNode =
+        stubLongRunningCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.stopNode(
           request,
@@ -1381,9 +1371,8 @@ describe('v1.TpuClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.startNode = stubLongRunningCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.startNode =
+        stubLongRunningCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.startNode(
           request,
@@ -1575,9 +1564,8 @@ describe('v1.TpuClient', () => {
         generateSampleMessage(new protos.google.cloud.tpu.v1.Node()),
         generateSampleMessage(new protos.google.cloud.tpu.v1.Node()),
       ];
-      client.innerApiCalls.listNodes = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.listNodes =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.listNodes(
           request,
@@ -1646,9 +1634,8 @@ describe('v1.TpuClient', () => {
         generateSampleMessage(new protos.google.cloud.tpu.v1.Node()),
         generateSampleMessage(new protos.google.cloud.tpu.v1.Node()),
       ];
-      client.descriptors.page.listNodes.createStream = stubPageStreamingCall(
-        expectedResponse
-      );
+      client.descriptors.page.listNodes.createStream =
+        stubPageStreamingCall(expectedResponse);
       const stream = client.listNodesStream(request);
       const promise = new Promise((resolve, reject) => {
         const responses: protos.google.cloud.tpu.v1.Node[] = [];
@@ -1734,9 +1721,8 @@ describe('v1.TpuClient', () => {
         generateSampleMessage(new protos.google.cloud.tpu.v1.Node()),
         generateSampleMessage(new protos.google.cloud.tpu.v1.Node()),
       ];
-      client.descriptors.page.listNodes.asyncIterate = stubAsyncIterationCall(
-        expectedResponse
-      );
+      client.descriptors.page.listNodes.asyncIterate =
+        stubAsyncIterationCall(expectedResponse);
       const responses: protos.google.cloud.tpu.v1.INode[] = [];
       const iterable = client.listNodesAsync(request);
       for await (const resource of iterable) {
@@ -1821,9 +1807,8 @@ describe('v1.TpuClient', () => {
           new protos.google.cloud.tpu.v1.TensorFlowVersion()
         ),
       ];
-      client.innerApiCalls.listTensorFlowVersions = stubSimpleCall(
-        expectedResponse
-      );
+      client.innerApiCalls.listTensorFlowVersions =
+        stubSimpleCall(expectedResponse);
       const [response] = await client.listTensorFlowVersions(request);
       assert.deepStrictEqual(response, expectedResponse);
       assert(
@@ -1862,9 +1847,8 @@ describe('v1.TpuClient', () => {
           new protos.google.cloud.tpu.v1.TensorFlowVersion()
         ),
       ];
-      client.innerApiCalls.listTensorFlowVersions = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.listTensorFlowVersions =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.listTensorFlowVersions(
           request,
@@ -1945,9 +1929,8 @@ describe('v1.TpuClient', () => {
           new protos.google.cloud.tpu.v1.TensorFlowVersion()
         ),
       ];
-      client.descriptors.page.listTensorFlowVersions.createStream = stubPageStreamingCall(
-        expectedResponse
-      );
+      client.descriptors.page.listTensorFlowVersions.createStream =
+        stubPageStreamingCall(expectedResponse);
       const stream = client.listTensorFlowVersionsStream(request);
       const promise = new Promise((resolve, reject) => {
         const responses: protos.google.cloud.tpu.v1.TensorFlowVersion[] = [];
@@ -1967,16 +1950,18 @@ describe('v1.TpuClient', () => {
       const responses = await promise;
       assert.deepStrictEqual(responses, expectedResponse);
       assert(
-        (client.descriptors.page.listTensorFlowVersions
-          .createStream as SinonStub)
+        (
+          client.descriptors.page.listTensorFlowVersions
+            .createStream as SinonStub
+        )
           .getCall(0)
           .calledWith(client.innerApiCalls.listTensorFlowVersions, request)
       );
       assert.strictEqual(
-        (client.descriptors.page.listTensorFlowVersions
-          .createStream as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listTensorFlowVersions
+            .createStream as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -1993,10 +1978,8 @@ describe('v1.TpuClient', () => {
       request.parent = '';
       const expectedHeaderRequestParams = 'parent=';
       const expectedError = new Error('expected');
-      client.descriptors.page.listTensorFlowVersions.createStream = stubPageStreamingCall(
-        undefined,
-        expectedError
-      );
+      client.descriptors.page.listTensorFlowVersions.createStream =
+        stubPageStreamingCall(undefined, expectedError);
       const stream = client.listTensorFlowVersionsStream(request);
       const promise = new Promise((resolve, reject) => {
         const responses: protos.google.cloud.tpu.v1.TensorFlowVersion[] = [];
@@ -2015,16 +1998,18 @@ describe('v1.TpuClient', () => {
       });
       await assert.rejects(promise, expectedError);
       assert(
-        (client.descriptors.page.listTensorFlowVersions
-          .createStream as SinonStub)
+        (
+          client.descriptors.page.listTensorFlowVersions
+            .createStream as SinonStub
+        )
           .getCall(0)
           .calledWith(client.innerApiCalls.listTensorFlowVersions, request)
       );
       assert.strictEqual(
-        (client.descriptors.page.listTensorFlowVersions
-          .createStream as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listTensorFlowVersions
+            .createStream as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -2051,9 +2036,8 @@ describe('v1.TpuClient', () => {
           new protos.google.cloud.tpu.v1.TensorFlowVersion()
         ),
       ];
-      client.descriptors.page.listTensorFlowVersions.asyncIterate = stubAsyncIterationCall(
-        expectedResponse
-      );
+      client.descriptors.page.listTensorFlowVersions.asyncIterate =
+        stubAsyncIterationCall(expectedResponse);
       const responses: protos.google.cloud.tpu.v1.ITensorFlowVersion[] = [];
       const iterable = client.listTensorFlowVersionsAsync(request);
       for await (const resource of iterable) {
@@ -2061,15 +2045,17 @@ describe('v1.TpuClient', () => {
       }
       assert.deepStrictEqual(responses, expectedResponse);
       assert.deepStrictEqual(
-        (client.descriptors.page.listTensorFlowVersions
-          .asyncIterate as SinonStub).getCall(0).args[1],
+        (
+          client.descriptors.page.listTensorFlowVersions
+            .asyncIterate as SinonStub
+        ).getCall(0).args[1],
         request
       );
       assert.strictEqual(
-        (client.descriptors.page.listTensorFlowVersions
-          .asyncIterate as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listTensorFlowVersions
+            .asyncIterate as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -2086,10 +2072,8 @@ describe('v1.TpuClient', () => {
       request.parent = '';
       const expectedHeaderRequestParams = 'parent=';
       const expectedError = new Error('expected');
-      client.descriptors.page.listTensorFlowVersions.asyncIterate = stubAsyncIterationCall(
-        undefined,
-        expectedError
-      );
+      client.descriptors.page.listTensorFlowVersions.asyncIterate =
+        stubAsyncIterationCall(undefined, expectedError);
       const iterable = client.listTensorFlowVersionsAsync(request);
       await assert.rejects(async () => {
         const responses: protos.google.cloud.tpu.v1.ITensorFlowVersion[] = [];
@@ -2098,15 +2082,17 @@ describe('v1.TpuClient', () => {
         }
       });
       assert.deepStrictEqual(
-        (client.descriptors.page.listTensorFlowVersions
-          .asyncIterate as SinonStub).getCall(0).args[1],
+        (
+          client.descriptors.page.listTensorFlowVersions
+            .asyncIterate as SinonStub
+        ).getCall(0).args[1],
         request
       );
       assert.strictEqual(
-        (client.descriptors.page.listTensorFlowVersions
-          .asyncIterate as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listTensorFlowVersions
+            .asyncIterate as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -2136,9 +2122,8 @@ describe('v1.TpuClient', () => {
         generateSampleMessage(new protos.google.cloud.tpu.v1.AcceleratorType()),
         generateSampleMessage(new protos.google.cloud.tpu.v1.AcceleratorType()),
       ];
-      client.innerApiCalls.listAcceleratorTypes = stubSimpleCall(
-        expectedResponse
-      );
+      client.innerApiCalls.listAcceleratorTypes =
+        stubSimpleCall(expectedResponse);
       const [response] = await client.listAcceleratorTypes(request);
       assert.deepStrictEqual(response, expectedResponse);
       assert(
@@ -2171,9 +2156,8 @@ describe('v1.TpuClient', () => {
         generateSampleMessage(new protos.google.cloud.tpu.v1.AcceleratorType()),
         generateSampleMessage(new protos.google.cloud.tpu.v1.AcceleratorType()),
       ];
-      client.innerApiCalls.listAcceleratorTypes = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.listAcceleratorTypes =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.listAcceleratorTypes(
           request,
@@ -2245,9 +2229,8 @@ describe('v1.TpuClient', () => {
         generateSampleMessage(new protos.google.cloud.tpu.v1.AcceleratorType()),
         generateSampleMessage(new protos.google.cloud.tpu.v1.AcceleratorType()),
       ];
-      client.descriptors.page.listAcceleratorTypes.createStream = stubPageStreamingCall(
-        expectedResponse
-      );
+      client.descriptors.page.listAcceleratorTypes.createStream =
+        stubPageStreamingCall(expectedResponse);
       const stream = client.listAcceleratorTypesStream(request);
       const promise = new Promise((resolve, reject) => {
         const responses: protos.google.cloud.tpu.v1.AcceleratorType[] = [];
@@ -2272,10 +2255,9 @@ describe('v1.TpuClient', () => {
           .calledWith(client.innerApiCalls.listAcceleratorTypes, request)
       );
       assert.strictEqual(
-        (client.descriptors.page.listAcceleratorTypes
-          .createStream as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listAcceleratorTypes.createStream as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -2292,10 +2274,8 @@ describe('v1.TpuClient', () => {
       request.parent = '';
       const expectedHeaderRequestParams = 'parent=';
       const expectedError = new Error('expected');
-      client.descriptors.page.listAcceleratorTypes.createStream = stubPageStreamingCall(
-        undefined,
-        expectedError
-      );
+      client.descriptors.page.listAcceleratorTypes.createStream =
+        stubPageStreamingCall(undefined, expectedError);
       const stream = client.listAcceleratorTypesStream(request);
       const promise = new Promise((resolve, reject) => {
         const responses: protos.google.cloud.tpu.v1.AcceleratorType[] = [];
@@ -2319,10 +2299,9 @@ describe('v1.TpuClient', () => {
           .calledWith(client.innerApiCalls.listAcceleratorTypes, request)
       );
       assert.strictEqual(
-        (client.descriptors.page.listAcceleratorTypes
-          .createStream as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listAcceleratorTypes.createStream as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -2343,9 +2322,8 @@ describe('v1.TpuClient', () => {
         generateSampleMessage(new protos.google.cloud.tpu.v1.AcceleratorType()),
         generateSampleMessage(new protos.google.cloud.tpu.v1.AcceleratorType()),
       ];
-      client.descriptors.page.listAcceleratorTypes.asyncIterate = stubAsyncIterationCall(
-        expectedResponse
-      );
+      client.descriptors.page.listAcceleratorTypes.asyncIterate =
+        stubAsyncIterationCall(expectedResponse);
       const responses: protos.google.cloud.tpu.v1.IAcceleratorType[] = [];
       const iterable = client.listAcceleratorTypesAsync(request);
       for await (const resource of iterable) {
@@ -2353,15 +2331,15 @@ describe('v1.TpuClient', () => {
       }
       assert.deepStrictEqual(responses, expectedResponse);
       assert.deepStrictEqual(
-        (client.descriptors.page.listAcceleratorTypes
-          .asyncIterate as SinonStub).getCall(0).args[1],
+        (
+          client.descriptors.page.listAcceleratorTypes.asyncIterate as SinonStub
+        ).getCall(0).args[1],
         request
       );
       assert.strictEqual(
-        (client.descriptors.page.listAcceleratorTypes
-          .asyncIterate as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listAcceleratorTypes.asyncIterate as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -2378,10 +2356,8 @@ describe('v1.TpuClient', () => {
       request.parent = '';
       const expectedHeaderRequestParams = 'parent=';
       const expectedError = new Error('expected');
-      client.descriptors.page.listAcceleratorTypes.asyncIterate = stubAsyncIterationCall(
-        undefined,
-        expectedError
-      );
+      client.descriptors.page.listAcceleratorTypes.asyncIterate =
+        stubAsyncIterationCall(undefined, expectedError);
       const iterable = client.listAcceleratorTypesAsync(request);
       await assert.rejects(async () => {
         const responses: protos.google.cloud.tpu.v1.IAcceleratorType[] = [];
@@ -2390,15 +2366,15 @@ describe('v1.TpuClient', () => {
         }
       });
       assert.deepStrictEqual(
-        (client.descriptors.page.listAcceleratorTypes
-          .asyncIterate as SinonStub).getCall(0).args[1],
+        (
+          client.descriptors.page.listAcceleratorTypes.asyncIterate as SinonStub
+        ).getCall(0).args[1],
         request
       );
       assert.strictEqual(
-        (client.descriptors.page.listAcceleratorTypes
-          .asyncIterate as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listAcceleratorTypes.asyncIterate as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -2459,9 +2435,8 @@ describe('v1.TpuClient', () => {
       });
 
       it('matchAcceleratorTypeFromAcceleratorTypeName', () => {
-        const result = client.matchAcceleratorTypeFromAcceleratorTypeName(
-          fakePath
-        );
+        const result =
+          client.matchAcceleratorTypeFromAcceleratorTypeName(fakePath);
         assert.strictEqual(result, 'acceleratorTypeValue');
         assert(
           (client.pathTemplates.acceleratorTypePathTemplate.match as SinonStub)
@@ -2649,8 +2624,10 @@ describe('v1.TpuClient', () => {
         );
         assert.strictEqual(result, fakePath);
         assert(
-          (client.pathTemplates.tensorFlowVersionPathTemplate
-            .render as SinonStub)
+          (
+            client.pathTemplates.tensorFlowVersionPathTemplate
+              .render as SinonStub
+          )
             .getCall(-1)
             .calledWith(expectedParameters)
         );
@@ -2660,8 +2637,10 @@ describe('v1.TpuClient', () => {
         const result = client.matchProjectFromTensorFlowVersionName(fakePath);
         assert.strictEqual(result, 'projectValue');
         assert(
-          (client.pathTemplates.tensorFlowVersionPathTemplate
-            .match as SinonStub)
+          (
+            client.pathTemplates.tensorFlowVersionPathTemplate
+              .match as SinonStub
+          )
             .getCall(-1)
             .calledWith(fakePath)
         );
@@ -2671,21 +2650,24 @@ describe('v1.TpuClient', () => {
         const result = client.matchLocationFromTensorFlowVersionName(fakePath);
         assert.strictEqual(result, 'locationValue');
         assert(
-          (client.pathTemplates.tensorFlowVersionPathTemplate
-            .match as SinonStub)
+          (
+            client.pathTemplates.tensorFlowVersionPathTemplate
+              .match as SinonStub
+          )
             .getCall(-1)
             .calledWith(fakePath)
         );
       });
 
       it('matchTensorFlowVersionFromTensorFlowVersionName', () => {
-        const result = client.matchTensorFlowVersionFromTensorFlowVersionName(
-          fakePath
-        );
+        const result =
+          client.matchTensorFlowVersionFromTensorFlowVersionName(fakePath);
         assert.strictEqual(result, 'tensorFlowVersionValue');
         assert(
-          (client.pathTemplates.tensorFlowVersionPathTemplate
-            .match as SinonStub)
+          (
+            client.pathTemplates.tensorFlowVersionPathTemplate
+              .match as SinonStub
+          )
             .getCall(-1)
             .calledWith(fakePath)
         );
