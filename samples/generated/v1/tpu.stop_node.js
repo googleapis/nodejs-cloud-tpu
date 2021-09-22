@@ -12,16 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START tpu_get_accelerator_type_sample]
+function main() {
+  // [START tpu_stop_node_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The resource name.
+   *  The resource name.
    */
   // const name = 'abc123'
 
@@ -31,19 +30,18 @@ function main(name) {
   // Instantiates a client
   const tpuClient = new TpuClient();
 
-  async function getAcceleratorType() {
+  async function stopNode() {
     // Construct request
-    const request = {
-      name,
-    };
+    const request = {};
 
     // Run request
-    const response = await tpuClient.getAcceleratorType(request);
+    const [operation] = await tpuClient.stopNode(request);
+    const [response] = await operation.promise();
     console.log(response);
   }
 
-  getAcceleratorType();
-  // [END tpu_get_accelerator_type_sample]
+  stopNode();
+  // [END tpu_stop_node_sample]
 }
 
 process.on('unhandledRejection', err => {

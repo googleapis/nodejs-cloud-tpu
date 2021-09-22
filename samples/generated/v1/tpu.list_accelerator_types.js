@@ -12,22 +12,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main() {
-  // [START tpu_reimage_node_sample]
+function main(parent) {
+  // [START tpu_list_accelerator_types_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  The resource name.
+   *  Required. The parent resource name.
    */
-  // const name = 'abc123'
+  // const parent = 'abc123'
   /**
-   *  The version for reimage to create.
+   *  The maximum number of items to return.
    */
-  // const tensorflowVersion = 'abc123'
+  // const pageSize = 1234
+  /**
+   *  The next_page_token value returned from a previous List request, if any.
+   */
+  // const pageToken = 'abc123'
+  /**
+   *  List filter.
+   */
+  // const filter = 'abc123'
+  /**
+   *  Sort results.
+   */
+  // const orderBy = 'abc123'
 
   // Imports the Tpu library
   const {TpuClient} = require('@google-cloud/tpu').v1;
@@ -35,19 +46,21 @@ function main() {
   // Instantiates a client
   const tpuClient = new TpuClient();
 
-  async function reimageNode() {
+  async function listAcceleratorTypes() {
     // Construct request
     const request = {
+      parent,
     };
 
     // Run request
-    const [operation] = await tpuClient.reimageNode(request);
-    const [response] = await operation.promise();
-    console.log(response);
+    const iterable = await tpuClient.listAcceleratorTypesAsync(request);
+    for await (const response of iterable) {
+      console.log(response);
+    }
   }
 
-  reimageNode();
-  // [END tpu_reimage_node_sample]
+  listAcceleratorTypes();
+  // [END tpu_list_accelerator_types_sample]
 }
 
 process.on('unhandledRejection', err => {

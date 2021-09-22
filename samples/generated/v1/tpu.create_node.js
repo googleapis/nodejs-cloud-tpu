@@ -12,18 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main() {
-  // [START tpu_stop_node_sample]
+function main(parent, node) {
+  // [START tpu_create_node_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  The resource name.
+   *  Required. The parent resource name.
    */
-  // const name = 'abc123'
+  // const parent = 'abc123'
+  /**
+   *  The unqualified resource name.
+   */
+  // const nodeId = 'abc123'
+  /**
+   *  Required. The node.
+   */
+  // const node = ''
 
   // Imports the Tpu library
   const {TpuClient} = require('@google-cloud/tpu').v1;
@@ -31,19 +38,21 @@ function main() {
   // Instantiates a client
   const tpuClient = new TpuClient();
 
-  async function stopNode() {
+  async function createNode() {
     // Construct request
     const request = {
+      parent,
+      node,
     };
 
     // Run request
-    const [operation] = await tpuClient.stopNode(request);
+    const [operation] = await tpuClient.createNode(request);
     const [response] = await operation.promise();
     console.log(response);
   }
 
-  stopNode();
-  // [END tpu_stop_node_sample]
+  createNode();
+  // [END tpu_create_node_sample]
 }
 
 process.on('unhandledRejection', err => {

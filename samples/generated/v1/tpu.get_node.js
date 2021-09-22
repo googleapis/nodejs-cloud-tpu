@@ -12,26 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(parent) {
-  // [START tpu_list_nodes_sample]
+function main(name) {
+  // [START tpu_get_node_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The parent resource name.
+   *  Required. The resource name.
    */
-  // const parent = 'abc123'
-  /**
-   *  The maximum number of items to return.
-   */
-  // const pageSize = 1234
-  /**
-   *  The next_page_token value returned from a previous List request, if any.
-   */
-  // const pageToken = 'abc123'
+  // const name = 'abc123'
 
   // Imports the Tpu library
   const {TpuClient} = require('@google-cloud/tpu').v1;
@@ -39,21 +30,19 @@ function main(parent) {
   // Instantiates a client
   const tpuClient = new TpuClient();
 
-  async function listNodes() {
+  async function getNode() {
     // Construct request
     const request = {
-      parent,
+      name,
     };
 
     // Run request
-    const iterable = await tpuClient.listNodesAsync(request);
-    for await (const response of iterable) {
-        console.log(response);
-    }
+    const response = await tpuClient.getNode(request);
+    console.log(response);
   }
 
-  listNodes();
-  // [END tpu_list_nodes_sample]
+  getNode();
+  // [END tpu_get_node_sample]
 }
 
 process.on('unhandledRejection', err => {

@@ -12,18 +12,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START tpu_get_node_sample]
+function main(parent) {
+  // [START tpu_list_tensor_flow_versions_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The resource name.
+   *  Required. The parent resource name.
    */
-  // const name = 'abc123'
+  // const parent = 'abc123'
+  /**
+   *  The maximum number of items to return.
+   */
+  // const pageSize = 1234
+  /**
+   *  The next_page_token value returned from a previous List request, if any.
+   */
+  // const pageToken = 'abc123'
+  /**
+   *  List filter.
+   */
+  // const filter = 'abc123'
+  /**
+   *  Sort results.
+   */
+  // const orderBy = 'abc123'
 
   // Imports the Tpu library
   const {TpuClient} = require('@google-cloud/tpu').v1;
@@ -31,19 +46,21 @@ function main(name) {
   // Instantiates a client
   const tpuClient = new TpuClient();
 
-  async function getNode() {
+  async function listTensorFlowVersions() {
     // Construct request
     const request = {
-      name,
+      parent,
     };
 
     // Run request
-    const response = await tpuClient.getNode(request);
-    console.log(response);
+    const iterable = await tpuClient.listTensorFlowVersionsAsync(request);
+    for await (const response of iterable) {
+      console.log(response);
+    }
   }
 
-  getNode();
-  // [END tpu_get_node_sample]
+  listTensorFlowVersions();
+  // [END tpu_list_tensor_flow_versions_sample]
 }
 
 process.on('unhandledRejection', err => {

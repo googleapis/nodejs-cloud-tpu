@@ -466,6 +466,10 @@ export class TpuClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.getNode(request);
+   *
+   * @example <caption>include:samples/generated/v1/tpu.get_node.js</caption>
+   * region_tag:tpu_get_node_sample
+   *
    */
   getNode(
     request?: protos.google.cloud.tpu.v1.IGetNodeRequest,
@@ -553,6 +557,10 @@ export class TpuClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.getTensorFlowVersion(request);
+   *
+   * @example <caption>include:samples/generated/v1/tpu.get_tensor_flow_version.js</caption>
+   * region_tag:tpu_get_tensor_flow_version_sample
+   *
    */
   getTensorFlowVersion(
     request?: protos.google.cloud.tpu.v1.IGetTensorFlowVersionRequest,
@@ -640,6 +648,10 @@ export class TpuClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.getAcceleratorType(request);
+   *
+   * @example <caption>include:samples/generated/v1/tpu.get_accelerator_type.js</caption>
+   * region_tag:tpu_get_accelerator_type_sample
+   *
    */
   getAcceleratorType(
     request?: protos.google.cloud.tpu.v1.IGetAcceleratorTypeRequest,
@@ -742,6 +754,10 @@ export class TpuClient {
    * @example
    * const [operation] = await client.createNode(request);
    * const [response] = await operation.promise();
+   *
+   * @example <caption>include:samples/generated/v1/tpu.create_node.js</caption>
+   * region_tag:tpu_create_node_sample
+   *
    */
   createNode(
     request?: protos.google.cloud.tpu.v1.ICreateNodeRequest,
@@ -805,6 +821,10 @@ export class TpuClient {
    * console.log(decodedOperation.result);
    * console.log(decodedOperation.done);
    * console.log(decodedOperation.metadata);
+   *
+   * @example <caption>include:samples/generated/v1/tpu.create_node.js</caption>
+   * region_tag:tpu_create_node_sample
+   *
    */
   async checkCreateNodeProgress(
     name: string
@@ -883,6 +903,10 @@ export class TpuClient {
    * @example
    * const [operation] = await client.deleteNode(request);
    * const [response] = await operation.promise();
+   *
+   * @example <caption>include:samples/generated/v1/tpu.delete_node.js</caption>
+   * region_tag:tpu_delete_node_sample
+   *
    */
   deleteNode(
     request?: protos.google.cloud.tpu.v1.IDeleteNodeRequest,
@@ -946,6 +970,10 @@ export class TpuClient {
    * console.log(decodedOperation.result);
    * console.log(decodedOperation.done);
    * console.log(decodedOperation.metadata);
+   *
+   * @example <caption>include:samples/generated/v1/tpu.delete_node.js</caption>
+   * region_tag:tpu_delete_node_sample
+   *
    */
   async checkDeleteNodeProgress(
     name: string
@@ -1026,6 +1054,10 @@ export class TpuClient {
    * @example
    * const [operation] = await client.reimageNode(request);
    * const [response] = await operation.promise();
+   *
+   * @example <caption>include:samples/generated/v1/tpu.reimage_node.js</caption>
+   * region_tag:tpu_reimage_node_sample
+   *
    */
   reimageNode(
     request?: protos.google.cloud.tpu.v1.IReimageNodeRequest,
@@ -1089,6 +1121,10 @@ export class TpuClient {
    * console.log(decodedOperation.result);
    * console.log(decodedOperation.done);
    * console.log(decodedOperation.metadata);
+   *
+   * @example <caption>include:samples/generated/v1/tpu.reimage_node.js</caption>
+   * region_tag:tpu_reimage_node_sample
+   *
    */
   async checkReimageNodeProgress(
     name: string
@@ -1167,6 +1203,10 @@ export class TpuClient {
    * @example
    * const [operation] = await client.stopNode(request);
    * const [response] = await operation.promise();
+   *
+   * @example <caption>include:samples/generated/v1/tpu.stop_node.js</caption>
+   * region_tag:tpu_stop_node_sample
+   *
    */
   stopNode(
     request?: protos.google.cloud.tpu.v1.IStopNodeRequest,
@@ -1230,6 +1270,10 @@ export class TpuClient {
    * console.log(decodedOperation.result);
    * console.log(decodedOperation.done);
    * console.log(decodedOperation.metadata);
+   *
+   * @example <caption>include:samples/generated/v1/tpu.stop_node.js</caption>
+   * region_tag:tpu_stop_node_sample
+   *
    */
   async checkStopNodeProgress(
     name: string
@@ -1308,6 +1352,10 @@ export class TpuClient {
    * @example
    * const [operation] = await client.startNode(request);
    * const [response] = await operation.promise();
+   *
+   * @example <caption>include:samples/generated/v1/tpu.start_node.js</caption>
+   * region_tag:tpu_start_node_sample
+   *
    */
   startNode(
     request?: protos.google.cloud.tpu.v1.IStartNodeRequest,
@@ -1371,6 +1419,10 @@ export class TpuClient {
    * console.log(decodedOperation.result);
    * console.log(decodedOperation.done);
    * console.log(decodedOperation.metadata);
+   *
+   * @example <caption>include:samples/generated/v1/tpu.start_node.js</caption>
+   * region_tag:tpu_start_node_sample
+   *
    */
   async checkStartNodeProgress(
     name: string
@@ -1444,6 +1496,10 @@ export class TpuClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/tpu.list_nodes.js</caption>
+   * region_tag:tpu_list_nodes_sample
+   *
    */
   listNodes(
     request?: protos.google.cloud.tpu.v1.IListNodesRequest,
@@ -1506,6 +1562,10 @@ export class TpuClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/tpu.list_nodes.js</caption>
+   * region_tag:tpu_list_nodes_sample
+   *
    */
   listNodesStream(
     request?: protos.google.cloud.tpu.v1.IListNodesRequest,
@@ -1519,7 +1579,8 @@ export class TpuClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listNodes'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listNodes.createStream(
       this.innerApiCalls.listNodes as gax.GaxCall,
@@ -1555,6 +1616,10 @@ export class TpuClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v1/tpu.list_nodes.js</caption>
+   * region_tag:tpu_list_nodes_sample
+   *
    */
   listNodesAsync(
     request?: protos.google.cloud.tpu.v1.IListNodesRequest,
@@ -1569,7 +1634,8 @@ export class TpuClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listNodes'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listNodes.asyncIterate(
       this.innerApiCalls['listNodes'] as GaxCall,
@@ -1635,6 +1701,10 @@ export class TpuClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/tpu.list_tensor_flow_versions.js</caption>
+   * region_tag:tpu_list_tensor_flow_versions_sample
+   *
    */
   listTensorFlowVersions(
     request?: protos.google.cloud.tpu.v1.IListTensorFlowVersionsRequest,
@@ -1709,6 +1779,10 @@ export class TpuClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/tpu.list_tensor_flow_versions.js</caption>
+   * region_tag:tpu_list_tensor_flow_versions_sample
+   *
    */
   listTensorFlowVersionsStream(
     request?: protos.google.cloud.tpu.v1.IListTensorFlowVersionsRequest,
@@ -1722,7 +1796,8 @@ export class TpuClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listTensorFlowVersions'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listTensorFlowVersions.createStream(
       this.innerApiCalls.listTensorFlowVersions as gax.GaxCall,
@@ -1762,6 +1837,10 @@ export class TpuClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v1/tpu.list_tensor_flow_versions.js</caption>
+   * region_tag:tpu_list_tensor_flow_versions_sample
+   *
    */
   listTensorFlowVersionsAsync(
     request?: protos.google.cloud.tpu.v1.IListTensorFlowVersionsRequest,
@@ -1776,7 +1855,8 @@ export class TpuClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listTensorFlowVersions'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listTensorFlowVersions.asyncIterate(
       this.innerApiCalls['listTensorFlowVersions'] as GaxCall,
@@ -1842,6 +1922,10 @@ export class TpuClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/tpu.list_accelerator_types.js</caption>
+   * region_tag:tpu_list_accelerator_types_sample
+   *
    */
   listAcceleratorTypes(
     request?: protos.google.cloud.tpu.v1.IListAcceleratorTypesRequest,
@@ -1912,6 +1996,10 @@ export class TpuClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/tpu.list_accelerator_types.js</caption>
+   * region_tag:tpu_list_accelerator_types_sample
+   *
    */
   listAcceleratorTypesStream(
     request?: protos.google.cloud.tpu.v1.IListAcceleratorTypesRequest,
@@ -1925,7 +2013,8 @@ export class TpuClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listAcceleratorTypes'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listAcceleratorTypes.createStream(
       this.innerApiCalls.listAcceleratorTypes as gax.GaxCall,
@@ -1965,6 +2054,10 @@ export class TpuClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v1/tpu.list_accelerator_types.js</caption>
+   * region_tag:tpu_list_accelerator_types_sample
+   *
    */
   listAcceleratorTypesAsync(
     request?: protos.google.cloud.tpu.v1.IListAcceleratorTypesRequest,
@@ -1979,7 +2072,8 @@ export class TpuClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listAcceleratorTypes'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listAcceleratorTypes.asyncIterate(
       this.innerApiCalls['listAcceleratorTypes'] as GaxCall,
