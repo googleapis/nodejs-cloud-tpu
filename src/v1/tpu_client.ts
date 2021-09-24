@@ -1519,7 +1519,8 @@ export class TpuClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listNodes'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listNodes.createStream(
       this.innerApiCalls.listNodes as gax.GaxCall,
@@ -1569,7 +1570,8 @@ export class TpuClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listNodes'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listNodes.asyncIterate(
       this.innerApiCalls['listNodes'] as GaxCall,
@@ -1722,7 +1724,8 @@ export class TpuClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listTensorFlowVersions'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listTensorFlowVersions.createStream(
       this.innerApiCalls.listTensorFlowVersions as gax.GaxCall,
@@ -1776,7 +1779,8 @@ export class TpuClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listTensorFlowVersions'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listTensorFlowVersions.asyncIterate(
       this.innerApiCalls['listTensorFlowVersions'] as GaxCall,
@@ -1925,7 +1929,8 @@ export class TpuClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listAcceleratorTypes'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listAcceleratorTypes.createStream(
       this.innerApiCalls.listAcceleratorTypes as gax.GaxCall,
@@ -1979,7 +1984,8 @@ export class TpuClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listAcceleratorTypes'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listAcceleratorTypes.asyncIterate(
       this.innerApiCalls['listAcceleratorTypes'] as GaxCall,

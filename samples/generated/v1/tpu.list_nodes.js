@@ -12,18 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START tpu_v1_generated_Tpu_DeleteNode_async]
+function main(parent) {
+  // [START tpu_v1_generated_Tpu_ListNodes_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The resource name.
+   *  Required. The parent resource name.
    */
-  // const name = 'abc123'
+  // const parent = 'abc123'
+  /**
+   *  The maximum number of items to return.
+   */
+  // const pageSize = 1234
+  /**
+   *  The next_page_token value returned from a previous List request, if any.
+   */
+  // const pageToken = 'abc123'
 
   // Imports the Tpu library
   const {TpuClient} = require('@google-cloud/tpu').v1;
@@ -31,20 +38,21 @@ function main(name) {
   // Instantiates a client
   const tpuClient = new TpuClient();
 
-  async function deleteNode() {
+  async function listNodes() {
     // Construct request
     const request = {
-      name,
+      parent,
     };
 
     // Run request
-    const [operation] = await tpuClient.deleteNode(request);
-    const [response] = await operation.promise();
-    console.log(response);
+    const iterable = await tpuClient.listNodesAsync(request);
+    for await (const response of iterable) {
+      console.log(response);
+    }
   }
 
-  deleteNode();
-  // [END tpu_v1_generated_Tpu_DeleteNode_async]
+  listNodes();
+  // [END tpu_v1_generated_Tpu_ListNodes_async]
 }
 
 process.on('unhandledRejection', err => {

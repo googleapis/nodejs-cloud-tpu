@@ -12,16 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main() {
-  // [START tpu_v1_generated_Tpu_StartNode_async]
+function main(name) {
+  // [START tpu_v1_generated_Tpu_DeleteNode_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  The resource name.
+   *  Required. The resource name.
    */
   // const name = 'abc123'
 
@@ -31,19 +30,20 @@ function main() {
   // Instantiates a client
   const tpuClient = new TpuClient();
 
-  async function startNode() {
+  async function deleteNode() {
     // Construct request
     const request = {
+      name,
     };
 
     // Run request
-    const [operation] = await tpuClient.startNode(request);
+    const [operation] = await tpuClient.deleteNode(request);
     const [response] = await operation.promise();
     console.log(response);
   }
 
-  startNode();
-  // [END tpu_v1_generated_Tpu_StartNode_async]
+  deleteNode();
+  // [END tpu_v1_generated_Tpu_DeleteNode_async]
 }
 
 process.on('unhandledRejection', err => {

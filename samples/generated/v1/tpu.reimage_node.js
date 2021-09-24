@@ -12,18 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START tpu_v1_generated_Tpu_GetNode_async]
+function main() {
+  // [START tpu_v1_generated_Tpu_ReimageNode_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The resource name.
+   *  The resource name.
    */
   // const name = 'abc123'
+  /**
+   *  The version for reimage to create.
+   */
+  // const tensorflowVersion = 'abc123'
 
   // Imports the Tpu library
   const {TpuClient} = require('@google-cloud/tpu').v1;
@@ -31,19 +34,18 @@ function main(name) {
   // Instantiates a client
   const tpuClient = new TpuClient();
 
-  async function getNode() {
+  async function reimageNode() {
     // Construct request
-    const request = {
-      name,
-    };
+    const request = {};
 
     // Run request
-    const response = await tpuClient.getNode(request);
+    const [operation] = await tpuClient.reimageNode(request);
+    const [response] = await operation.promise();
     console.log(response);
   }
 
-  getNode();
-  // [END tpu_v1_generated_Tpu_GetNode_async]
+  reimageNode();
+  // [END tpu_v1_generated_Tpu_ReimageNode_async]
 }
 
 process.on('unhandledRejection', err => {

@@ -12,18 +12,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START tpu_v1_generated_Tpu_GetAcceleratorType_async]
+function main(parent) {
+  // [START tpu_v1_generated_Tpu_ListAcceleratorTypes_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The resource name.
+   *  Required. The parent resource name.
    */
-  // const name = 'abc123'
+  // const parent = 'abc123'
+  /**
+   *  The maximum number of items to return.
+   */
+  // const pageSize = 1234
+  /**
+   *  The next_page_token value returned from a previous List request, if any.
+   */
+  // const pageToken = 'abc123'
+  /**
+   *  List filter.
+   */
+  // const filter = 'abc123'
+  /**
+   *  Sort results.
+   */
+  // const orderBy = 'abc123'
 
   // Imports the Tpu library
   const {TpuClient} = require('@google-cloud/tpu').v1;
@@ -31,19 +46,21 @@ function main(name) {
   // Instantiates a client
   const tpuClient = new TpuClient();
 
-  async function getAcceleratorType() {
+  async function listAcceleratorTypes() {
     // Construct request
     const request = {
-      name,
+      parent,
     };
 
     // Run request
-    const response = await tpuClient.getAcceleratorType(request);
-    console.log(response);
+    const iterable = await tpuClient.listAcceleratorTypesAsync(request);
+    for await (const response of iterable) {
+      console.log(response);
+    }
   }
 
-  getAcceleratorType();
-  // [END tpu_v1_generated_Tpu_GetAcceleratorType_async]
+  listAcceleratorTypes();
+  // [END tpu_v1_generated_Tpu_ListAcceleratorTypes_async]
 }
 
 process.on('unhandledRejection', err => {

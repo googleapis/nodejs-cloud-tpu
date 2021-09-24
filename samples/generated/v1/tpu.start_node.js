@@ -12,16 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START tpu_v1_generated_Tpu_GetTensorFlowVersion_async]
+function main() {
+  // [START tpu_v1_generated_Tpu_StartNode_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The resource name.
+   *  The resource name.
    */
   // const name = 'abc123'
 
@@ -31,19 +30,18 @@ function main(name) {
   // Instantiates a client
   const tpuClient = new TpuClient();
 
-  async function getTensorFlowVersion() {
+  async function startNode() {
     // Construct request
-    const request = {
-      name,
-    };
+    const request = {};
 
     // Run request
-    const response = await tpuClient.getTensorFlowVersion(request);
+    const [operation] = await tpuClient.startNode(request);
+    const [response] = await operation.promise();
     console.log(response);
   }
 
-  getTensorFlowVersion();
-  // [END tpu_v1_generated_Tpu_GetTensorFlowVersion_async]
+  startNode();
+  // [END tpu_v1_generated_Tpu_StartNode_async]
 }
 
 process.on('unhandledRejection', err => {
