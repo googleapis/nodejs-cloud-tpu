@@ -204,77 +204,77 @@ export namespace google {
                 namespace Tpu {
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#listNodes}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|listNodes}.
                      * @param error Error, if any
                      * @param [response] ListNodesResponse
                      */
                     type ListNodesCallback = (error: (Error|null), response?: google.cloud.tpu.v1.ListNodesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#getNode}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|getNode}.
                      * @param error Error, if any
                      * @param [response] Node
                      */
                     type GetNodeCallback = (error: (Error|null), response?: google.cloud.tpu.v1.Node) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#createNode}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|createNode}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type CreateNodeCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#deleteNode}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|deleteNode}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type DeleteNodeCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#reimageNode}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|reimageNode}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type ReimageNodeCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#stopNode}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|stopNode}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type StopNodeCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#startNode}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|startNode}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type StartNodeCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#listTensorFlowVersions}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|listTensorFlowVersions}.
                      * @param error Error, if any
                      * @param [response] ListTensorFlowVersionsResponse
                      */
                     type ListTensorFlowVersionsCallback = (error: (Error|null), response?: google.cloud.tpu.v1.ListTensorFlowVersionsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#getTensorFlowVersion}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|getTensorFlowVersion}.
                      * @param error Error, if any
                      * @param [response] TensorFlowVersion
                      */
                     type GetTensorFlowVersionCallback = (error: (Error|null), response?: google.cloud.tpu.v1.TensorFlowVersion) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#listAcceleratorTypes}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|listAcceleratorTypes}.
                      * @param error Error, if any
                      * @param [response] ListAcceleratorTypesResponse
                      */
                     type ListAcceleratorTypesCallback = (error: (Error|null), response?: google.cloud.tpu.v1.ListAcceleratorTypesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v1.Tpu#getAcceleratorType}.
+                     * Callback as used by {@link google.cloud.tpu.v1.Tpu|getAcceleratorType}.
                      * @param error Error, if any
                      * @param [response] AcceleratorType
                      */
@@ -2735,91 +2735,91 @@ export namespace google {
                 namespace Tpu {
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#listNodes}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|listNodes}.
                      * @param error Error, if any
                      * @param [response] ListNodesResponse
                      */
                     type ListNodesCallback = (error: (Error|null), response?: google.cloud.tpu.v2alpha1.ListNodesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#getNode}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|getNode}.
                      * @param error Error, if any
                      * @param [response] Node
                      */
                     type GetNodeCallback = (error: (Error|null), response?: google.cloud.tpu.v2alpha1.Node) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#createNode}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|createNode}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type CreateNodeCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#deleteNode}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|deleteNode}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type DeleteNodeCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#stopNode}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|stopNode}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type StopNodeCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#startNode}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|startNode}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type StartNodeCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#updateNode}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|updateNode}.
                      * @param error Error, if any
                      * @param [response] Operation
                      */
                     type UpdateNodeCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#generateServiceIdentity}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|generateServiceIdentity}.
                      * @param error Error, if any
                      * @param [response] GenerateServiceIdentityResponse
                      */
                     type GenerateServiceIdentityCallback = (error: (Error|null), response?: google.cloud.tpu.v2alpha1.GenerateServiceIdentityResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#listAcceleratorTypes}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|listAcceleratorTypes}.
                      * @param error Error, if any
                      * @param [response] ListAcceleratorTypesResponse
                      */
                     type ListAcceleratorTypesCallback = (error: (Error|null), response?: google.cloud.tpu.v2alpha1.ListAcceleratorTypesResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#getAcceleratorType}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|getAcceleratorType}.
                      * @param error Error, if any
                      * @param [response] AcceleratorType
                      */
                     type GetAcceleratorTypeCallback = (error: (Error|null), response?: google.cloud.tpu.v2alpha1.AcceleratorType) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#listRuntimeVersions}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|listRuntimeVersions}.
                      * @param error Error, if any
                      * @param [response] ListRuntimeVersionsResponse
                      */
                     type ListRuntimeVersionsCallback = (error: (Error|null), response?: google.cloud.tpu.v2alpha1.ListRuntimeVersionsResponse) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#getRuntimeVersion}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|getRuntimeVersion}.
                      * @param error Error, if any
                      * @param [response] RuntimeVersion
                      */
                     type GetRuntimeVersionCallback = (error: (Error|null), response?: google.cloud.tpu.v2alpha1.RuntimeVersion) => void;
 
                     /**
-                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu#getGuestAttributes}.
+                     * Callback as used by {@link google.cloud.tpu.v2alpha1.Tpu|getGuestAttributes}.
                      * @param error Error, if any
                      * @param [response] GetGuestAttributesResponse
                      */
@@ -8675,6 +8675,9 @@ export namespace google {
             /** FieldOptions lazy */
             lazy?: (boolean|null);
 
+            /** FieldOptions unverifiedLazy */
+            unverifiedLazy?: (boolean|null);
+
             /** FieldOptions deprecated */
             deprecated?: (boolean|null);
 
@@ -8711,6 +8714,9 @@ export namespace google {
 
             /** FieldOptions lazy. */
             public lazy: boolean;
+
+            /** FieldOptions unverifiedLazy. */
+            public unverifiedLazy: boolean;
 
             /** FieldOptions deprecated. */
             public deprecated: boolean;
@@ -10513,35 +10519,35 @@ export namespace google {
         namespace Operations {
 
             /**
-             * Callback as used by {@link google.longrunning.Operations#listOperations}.
+             * Callback as used by {@link google.longrunning.Operations|listOperations}.
              * @param error Error, if any
              * @param [response] ListOperationsResponse
              */
             type ListOperationsCallback = (error: (Error|null), response?: google.longrunning.ListOperationsResponse) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations#getOperation}.
+             * Callback as used by {@link google.longrunning.Operations|getOperation}.
              * @param error Error, if any
              * @param [response] Operation
              */
             type GetOperationCallback = (error: (Error|null), response?: google.longrunning.Operation) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations#deleteOperation}.
+             * Callback as used by {@link google.longrunning.Operations|deleteOperation}.
              * @param error Error, if any
              * @param [response] Empty
              */
             type DeleteOperationCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations#cancelOperation}.
+             * Callback as used by {@link google.longrunning.Operations|cancelOperation}.
              * @param error Error, if any
              * @param [response] Empty
              */
             type CancelOperationCallback = (error: (Error|null), response?: google.protobuf.Empty) => void;
 
             /**
-             * Callback as used by {@link google.longrunning.Operations#waitOperation}.
+             * Callback as used by {@link google.longrunning.Operations|waitOperation}.
              * @param error Error, if any
              * @param [response] Operation
              */
